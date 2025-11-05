@@ -10,6 +10,9 @@ import Team from './Team';
 import News from './News';
 import Contact from './Contact';
 import Footer from './Footer';
+import WelcomePopup from './WelcomePopup';
+import BackToTopButton from './BackToTopButton';
+import AIChatWidget from './AIChatWidget';
 
 const App: React.FC = () => {
 
@@ -56,6 +59,9 @@ const App: React.FC = () => {
           <Contact />
         </main>
         <Footer />
+        <WelcomePopup />
+        <BackToTopButton />
+        <AIChatWidget />
       </div>
     </LanguageProvider>
   );
