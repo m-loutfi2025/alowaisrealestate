@@ -14,7 +14,9 @@ const AIChatWidget: React.FC = () => {
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const { isArabic, t } = useLanguage();
+  const { isArabic } = useLanguage();
+
+  console.log('AIChatWidget: Component rendered, isOpen =', isOpen);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

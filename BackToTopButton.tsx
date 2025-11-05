@@ -4,10 +4,15 @@ const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    console.log('BackToTopButton: Component mounted');
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      const scrollY = window.pageYOffset;
+      console.log('BackToTopButton: Scroll position =', scrollY);
+      if (scrollY > 300) {
+        console.log('BackToTopButton: Showing button');
         setIsVisible(true);
       } else {
+        console.log('BackToTopButton: Hiding button');
         setIsVisible(false);
       }
     };

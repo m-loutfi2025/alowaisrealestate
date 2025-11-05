@@ -3,12 +3,15 @@ import { useLanguage } from './LanguageContext';
 
 const WelcomePopup: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { isArabic, t } = useLanguage();
+  const { isArabic } = useLanguage();
 
   useEffect(() => {
     const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
+    console.log('WelcomePopup: hasSeenWelcome =', hasSeenWelcome);
     if (!hasSeenWelcome) {
+      console.log('WelcomePopup: Setting timer to show popup in 2 seconds');
       const timer = setTimeout(() => {
+        console.log('WelcomePopup: Showing popup now');
         setIsVisible(true);
       }, 2000); // Show after 2 seconds
 
