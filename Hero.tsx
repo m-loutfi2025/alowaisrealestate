@@ -27,11 +27,10 @@ const Hero: React.FC = () => {
                         key={src}
                         role="group"
                         aria-roledescription="slide"
-                        aria-hidden={index !== currentSlide ? "true" : "false"}
-                        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+                        aria-hidden="false"
+                        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out hero-slide-${index + 1} ${
                             index === currentSlide ? 'opacity-100' : 'opacity-0'
                         }`}
-                        style={{ backgroundImage: `url(${src})` }}
                     />
                 ))}
             </div>

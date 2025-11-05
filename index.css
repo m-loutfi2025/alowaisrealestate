@@ -23,3 +23,16 @@ html {
 .loaded {
   opacity: 1;
 }
+
+/* Hero background images */
+.hero-slide-1 {
+  background-image: url('/hero-city-night.jpg');
+}
+
+.hero-slide-2 {
+  background-image: url('/hero-city-night2.jpg');
+}
+
+.hero-slide-3 {
+  background-image: url('/hero-city-night3.jpg');
+}
