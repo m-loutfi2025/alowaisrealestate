@@ -95,7 +95,7 @@ const AIChatWidget: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 left-6 bg-[#21A1D9] text-white p-4 rounded-full shadow-lg hover:bg-[#1a7fb0] transition-all duration-300 z-40 hover:scale-110"
         aria-label={isArabic ? 'فتح الدردشة' : 'Open chat'}
-        aria-expanded={isOpen.toString()}
+        aria-expanded={isOpen ? "true" : "false"}
       >
         {isOpen ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
