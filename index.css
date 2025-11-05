@@ -36,3 +36,8 @@ html {
 .hero-slide-3 {
   background-image: url('/hero-city-night3.jpg');
 }
+
+/* Google Maps iframe */
+.maps-iframe {
+  border: 0;
+}

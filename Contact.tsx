@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.788540455584!2d55.33538431498069!3d25.27878838386345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4316279f5799%3A0x2a101f3b392b4515!2sRigga%20Business%20Center%20-%20Port%20Saeed%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1625055000000!5m2!1sen!2sus"
                             width="100%"
                             height="100%"
-                            style={{ border: 0 }}
+                            className="maps-iframe"
                             allowFullScreen={false}
                             aria-hidden="false"
                             tabIndex={0}
