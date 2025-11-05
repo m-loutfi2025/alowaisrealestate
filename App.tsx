@@ -13,6 +13,7 @@ import Footer from './Footer';
 import WelcomePopup from './WelcomePopup';
 import BackToTopButton from './BackToTopButton';
 import AIChatWidget from './AIChatWidget';
+import CookieConsent from './CookieConsent';
 
 const App: React.FC = () => {
 
@@ -62,6 +63,7 @@ const App: React.FC = () => {
         <WelcomePopup />
         <BackToTopButton />
         <AIChatWidget />
+        <CookieConsent />
       </div>
     </LanguageProvider>
   );
