@@ -1,0 +1,25 @@
+/* Basic CSS for Al Owais Real Estate Website */
+
+/* This file is referenced in index.html but was missing */
+/* Most styles are handled by Tailwind CSS and inline styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading state */
+.loading {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.loaded {
+  opacity: 1;
+}
