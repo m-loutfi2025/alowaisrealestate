@@ -116,7 +116,7 @@ const AIChatWidget: React.FC = () => {
           {/* Header */}
           <div className="bg-[#21A1D9] text-white p-4 rounded-t-lg flex items-center justify-between">
             <div className="flex items-center">
-              <img src="/alowais-logo-transparent.png" alt="Al Owais" className="h-6 w-auto mr-2 filter brightness-0 invert" />
+              <img src="./alowais-logo-transparent.png" alt="Al Owais" className="h-6 w-auto mr-2 filter brightness-0 invert" />
               <span className="font-medium">
                 {isArabic ? 'مساعد العويس' : 'Al Owais Assistant'}
               </span>
