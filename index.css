@@ -1,17 +1,62 @@
-/* Basic CSS for Al Owais Real Estate Website */
+@import "tailwindcss";
 
-/* This file is referenced in index.html but was missing */
-/* Most styles are handled by Tailwind CSS and inline styles */
+/* Force include some common Tailwind classes */
+@layer utilities {
+  .bg-white { background-color: #ffffff; }
+  .bg-blue-600 { background-color: #2563eb; }
+  .text-white { color: #ffffff; }
+  .text-gray-800 { color: #1f2937; }
+  .p-4 { padding: 1rem; }
+  .m-4 { margin: 1rem; }
+  .flex { display: flex; }
+  .hidden { display: none; }
+  .fixed { position: fixed; }
+  .relative { position: relative; }
+  .top-0 { top: 0; }
+  .left-0 { left: 0; }
+  .right-0 { right: 0; }
+  .z-50 { z-index: 50; }
+  .transition-all { transition-property: all; }
+  .duration-300 { transition-duration: 300ms; }
+  .hover\:bg-blue-700:hover { background-color: #1d4ed8; }
+}
+
+/* Basic CSS for Al Owais Real Estate Website */
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  color: #2B3A4A;
+  overflow-x: hidden;
 }
 
 /* Ensure smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Font families */
+.font-brand-latin { 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700; 
+}
+
+.font-brand-arabic { 
+  font-family: 'Cairo', sans-serif; 
+  font-weight: 700; 
+}
+
+/* Animation classes */
+.animate-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Loading state */
@@ -26,15 +71,56 @@ html {
 
 /* Hero background images */
 .hero-slide-1 {
-  background-image: url('/hero-city-night.jpg');
+  background-image: url('./hero-city-night.jpg');
 }
 
 .hero-slide-2 {
-  background-image: url('/hero-city-night2.jpg');
+  background-image: url('./hero-city-night2.jpg');
 }
 
 .hero-slide-3 {
-  background-image: url('/hero-city-night3.jpg');
+  background-image: url('./hero-city-night3.jpg');
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { 
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb { 
+  background: #21A1D9; 
+  border-radius: 4px; 
+}
+
+::-webkit-scrollbar-track { 
+  background: #f1f5f9; 
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Animation delay classes */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* Dynamic background image utility */
+.bg-dynamic { 
+  background-size: cover; 
+  background-position: center; 
 }
 
 /* Google Maps iframe */
